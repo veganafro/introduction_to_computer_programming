@@ -16,3 +16,11 @@ python3 numbers.py <<EOF
 8369
 EOF
 echo ""
+
+echo "### Testing candy_bars.py\n"
+python3 candy_bars.py <<EOF
+6
+9
+69
+EOF
+echo ""
