@@ -24,3 +24,10 @@ python3 candy_bars.py <<EOF
 69
 EOF
 echo ""
+
+echo "### Testing foods.py\n"
+python3 foods.py <<EOF
+egg plants
+broccoli
+carrots
+EOF
