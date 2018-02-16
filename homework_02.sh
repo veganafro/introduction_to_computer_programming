@@ -5,6 +5,12 @@ multiply_out = $((python3 multiply.py <<EOF
 EOF
 ) 2>&1)
 
+if [[$multiply_out = *""*]]; then
+    echo ""
+else
+    echo ""
+fi
+
 echo "### Testing grade_bot_3000.py"
 grade_bot_out = $((python3 grade_bot_3000.py <<EOF
 Derp
