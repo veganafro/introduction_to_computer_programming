@@ -12,8 +12,8 @@ if [ "${multiply_out}"=~34 ] && \
     [ "${multiply_out}"=~187 ] && \
     [ "${multiply_out}"=~221 ] && \
     [ "${multiply_out}"=~289 ]; then
-    echo "VVV All multiply.py tests pass\n"
-    echo "${multiply_out}\n"
+        echo "VVV All multiply.py tests pass\n"
+        echo "${multiply_out}\n"
 else
     echo "XXX Some multiply.py tests do not pass\n"
     echo "${multiply_out}\n"
@@ -32,7 +32,15 @@ Intro to Derping
 EOF
 ) 2>&1)
 
+if [ "${grade_bot_out}"=~81.00 ] && \
+    [ "${grade_bot_out}"=~97.00 ] && \
+    [ "${grade_bot_out}"=~85.80 ]; then
+        echo "VVV All grade_bot_3000.py tests pass\n"
+else
+    echo "XXX Some grade_bot_3000.py tests do not pass\n"
+fi
 
+echo "${grade_bot_out}"
 
 echo "### Testing change_puhleeese.py\n"
 change_out=$((python3 change_puhleeese.py <<EOF
