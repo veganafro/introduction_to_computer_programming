@@ -19,7 +19,7 @@ else
     echo "${multiply_out}\n"
 fi
 
-echo "### Testing grade_bot_3000.py"
+echo "### Testing grade_bot_3000.py\n"
 grade_bot_out=$((python3 grade_bot_3000.py <<EOF
 Derp
 50
@@ -31,7 +31,7 @@ Derp
 EOF
 ) 2>&1)
 
-echo "### Testing change_puhleeese.py"
+echo "### Testing change_puhleeese.py\n"
 change_out=$((python3 change_puhleeese.py <<EOF
 Bobble derp
 10
