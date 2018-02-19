@@ -43,7 +43,7 @@ fi
 echo "${grade_bot_out}\n"
 
 echo "### Testing change_puhleeese.py\n"
-change_out=$((python3 change_puhleeese.py <<EOF
+change_out=$((python3 change_puhleese.py <<EOF
 Bobble derp
 10
 3
