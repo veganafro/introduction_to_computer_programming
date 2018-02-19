@@ -64,7 +64,11 @@ if [ "${change_out}"=~30.00  ] && \
     [ "${change_out}"=~8.65 ] && \
     [ "${change_out}"=~106.14 ] && \
     [ "${change_out}"=~150.03 ] && \
-    [ "${change_out}"=~43.89 ]; then
+    [ "${change_out}"=~43.89 ] && \
+    [ "${change_out}"=~175 ] && \
+    [ "${change_out}"=~1 ] && \
+    [ "${change_out}"=~0 ] && \
+    [ "${change_out}"=~4 ]; then
         echo "VVV All change_puhleeese.py tests pass\n"
 else
     echo "XXX Some change_puhleeese.py tests do not pass\n"
