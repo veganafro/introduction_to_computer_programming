@@ -46,7 +46,7 @@ echo "### Testing change_puhleeese.py\n"
 change_out=$((python3 change_puhleeese.py <<EOF
 Bobble derp
 10
-6
+3
 Derp bobble
 10
 9
@@ -56,3 +56,18 @@ Dobble
 999
 EOF
 ) 2>&1)
+
+if [ "${change_out}"=~30.00  ] && \
+    [ "${change_out}"=~29.99 ] && \
+    [ "${change_out}"=~37.50 ] && \
+    [ "${change_out}"=~97.49 ] && \
+    [ "${change_out}"=~8.65 ] && \
+    [ "${change_out}"=~106.14 ] && \
+    [ "${change_out}"=~150.03 ] && \
+    [ "${change_out}"=~43.89 ]; then
+        echo "VVV All change_puhleeese.py tests pass\n"
+else
+    echo "XXX Some change_puhleeese.py tests do not pass\n"
+fi
+
+echo "${change_out}"
