@@ -48,12 +48,12 @@ Bobble derp
 10
 3
 Derp bobble
-10
-9
+29.99
+1
 Dobble
-10
-69
-999
+12.50
+3
+150.03
 EOF
 ) 2>&1)
 
