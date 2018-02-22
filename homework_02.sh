@@ -5,7 +5,7 @@ multiply_out=$((python3 multiply.py <<EOF
 EOF
 ) 2>&1)
 
-if [ "${multiply_out}"=~34 ] && \
+if [ "${multiply_out}"=*34* ] && \
     [ "${multiply_out}"=~51 ] && \
     [ "${multiply_out}"=~85 ] && \
     [ "${multiply_out}"=~119 ] && \
