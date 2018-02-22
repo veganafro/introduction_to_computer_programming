@@ -13,9 +13,9 @@ if [ "${multiply_out}" == *"34"* ] && \
     [ "${multiply_out}" == *"221"* ] && \
     [ "${multiply_out}" == *"289"* ]; then
         echo "VVV All multiply.py tests pass\n"
-else
-    echo "XXX Some multiply.py tests do not pass\n"
-fi
+    else
+        echo "XXX Some multiply.py tests do not pass\n"
+    fi
 
 echo "${multiply_out}\n"
 
@@ -36,9 +36,9 @@ if [ "${grade_bot_out}" == *"81.00"* ] && \
     [ "${grade_bot_out}" == *"97.00"* ] && \
     [ "${grade_bot_out}" == *"85.80"* ]; then
         echo "VVV All grade_bot_3000.py tests pass\n"
-else
-    echo "XXX Some grade_bot_3000.py tests do not pass\n"
-fi
+    else
+        echo "XXX Some grade_bot_3000.py tests do not pass\n"
+    fi
 
 echo "${grade_bot_out}\n"
 
@@ -70,8 +70,8 @@ if [ "${change_out}" == *"30.00"*  ] && \
     [ "${change_out}" == *"0"* ] && \
     [ "${change_out}" == *"4"* ]; then
         echo "VVV All change_puhleeese.py tests pass\n"
-else
-    echo "XXX Some change_puhleeese.py tests do not pass\n"
-fi
+    else
+        echo "XXX Some change_puhleeese.py tests do not pass\n"
+    fi
 
 echo "${change_out}"
