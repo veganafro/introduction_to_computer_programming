@@ -5,13 +5,13 @@ multiply_out=$((python3 multiply.py <<EOF
 EOF
 ) 2>&1)
 
-if [ "${multiply_out}"=*34* ] && \
-    [ "${multiply_out}"=~51 ] && \
-    [ "${multiply_out}"=~85 ] && \
-    [ "${multiply_out}"=~119 ] && \
-    [ "${multiply_out}"=~187 ] && \
-    [ "${multiply_out}"=~221 ] && \
-    [ "${multiply_out}"=~289 ]; then
+if [ "${multiply_out}" == *"34"* ] && \
+    [ "${multiply_out}" == *"51"* ] && \
+    [ "${multiply_out}" == *"85"* ] && \
+    [ "${multiply_out}" == *"119"* ] && \
+    [ "${multiply_out}" == *"187"* ] && \
+    [ "${multiply_out}" == *"221"* ] && \
+    [ "${multiply_out}" == *"289"* ]; then
         echo "VVV All multiply.py tests pass\n"
 else
     echo "XXX Some multiply.py tests do not pass\n"
@@ -32,9 +32,9 @@ Intro to Derping
 EOF
 ) 2>&1)
 
-if [ "${grade_bot_out}"=~81.00 ] && \
-    [ "${grade_bot_out}"=~97.00 ] && \
-    [ "${grade_bot_out}"=~85.80 ]; then
+if [ "${grade_bot_out}" == *"81.00"* ] && \
+    [ "${grade_bot_out}" == *"97.00"* ] && \
+    [ "${grade_bot_out}" == *"85.80"* ]; then
         echo "VVV All grade_bot_3000.py tests pass\n"
 else
     echo "XXX Some grade_bot_3000.py tests do not pass\n"
@@ -57,18 +57,18 @@ Dobble
 EOF
 ) 2>&1)
 
-if [ "${change_out}"=~30.00  ] && \
-    [ "${change_out}"=~29.99 ] && \
-    [ "${change_out}"=~37.50 ] && \
-    [ "${change_out}"=~97.49 ] && \
-    [ "${change_out}"=~8.65 ] && \
-    [ "${change_out}"=~106.14 ] && \
-    [ "${change_out}"=~150.03 ] && \
-    [ "${change_out}"=~43.89 ] && \
-    [ "${change_out}"=~175 ] && \
-    [ "${change_out}"=~1 ] && \
-    [ "${change_out}"=~0 ] && \
-    [ "${change_out}"=~4 ]; then
+if [ "${change_out}" == *"30.00"*  ] && \
+    [ "${change_out}" == *"29.99"* ] && \
+    [ "${change_out}" == *"37.50"* ] && \
+    [ "${change_out}" == *"97.49"* ] && \
+    [ "${change_out}" == *"8.65"* ] && \
+    [ "${change_out}" == *"106.14"* ] && \
+    [ "${change_out}" == *"150.03"* ] && \
+    [ "${change_out}" == *"43.89"* ] && \
+    [ "${change_out}" == *"175"* ] && \
+    [ "${change_out}" == *"1"* ] && \
+    [ "${change_out}" == *"0"* ] && \
+    [ "${change_out}" == *"4"* ]; then
         echo "VVV All change_puhleeese.py tests pass\n"
 else
     echo "XXX Some change_puhleeese.py tests do not pass\n"
