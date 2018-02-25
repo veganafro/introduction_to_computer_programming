@@ -18,3 +18,14 @@ if [[ "${grade_out}" == *"translate"* ]] && \
     fi
 
 echo "${grade_out}\n"
+
+
+echo "### Testing tip.py\n"
+tip_out="$((python3 tip.py <<EOF
+
+EOF
+) 2>&1)
+$((python3 tip.py <<EOF
+
+EOF
+) 2>&1)"
