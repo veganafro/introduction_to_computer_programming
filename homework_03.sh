@@ -35,4 +35,7 @@ EOF
 
 if [[ "${tip_out}" == *'$2'* ]] && \
     [[ "${tip_out}" == *'$4'* ]]; then
-        echo "VVV All"
+        echo "VVV All tip.py tests pass\n"
+    else
+        echo "XXX Some tip.py tests do not pass\n"
+    fi
