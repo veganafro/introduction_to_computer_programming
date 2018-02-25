@@ -41,3 +41,57 @@ if [[ "${tip_out}" == *'$2'* ]] && \
     fi
 
 echo "${tip_out}\n"
+
+
+echo "### Testing adventure.py\n"
+adventure_out="$((python3 adventure.py <<EOF
+Derp
+Programmer
+EOF
+) 2>&1)
+$((python3 adventure.py <<EOF
+Derp
+Wizzard
+open
+EOF
+) 2&>1)
+$((python3 adventure.py <<EOF
+Derp
+Warrior
+leave
+EOF
+) 2&>1)"
+
+echo "${adventure_out}\n"
+
+echo "### Testing triangle_or_not.py\n"
+triangle_out="$((python3 triangle_or_not.py <<EOF
+1
+1
+2
+2
+2
+1
+EOF
+) 2>&1)
+$((python3 triangle_or_not.py <<EOF
+1
+1
+2
+2
+3
+3
+EOF
+) 2&>1)"
+
+if [[ "${triangle_out}" == *"HAZ"* ]] && \
+    [[ "${triangle_out}" == *"Nope"* ]]; then
+        echo "VVV All triangle_or_not.py tests pass\n"
+    else
+        echo "XXX Some triangle_or_not.py tests do not pass\n"
+    fi
+
+echo "${triangle_out}\n"
+
+echo "### Testing worksheet.py\n"
+worksheet_out=$(())
