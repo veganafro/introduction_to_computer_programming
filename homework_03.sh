@@ -54,13 +54,13 @@ Derp
 Wizzard
 open
 EOF
-) 2&>1)
+) 2>&1)
 $((python3 adventure.py <<EOF
 Derp
 Warrior
 leave
 EOF
-) 2&>1)"
+) 2>&1)"
 
 echo "${adventure_out}\n"
 
@@ -82,7 +82,7 @@ $((python3 triangle_or_not.py <<EOF
 3
 3
 EOF
-) 2&>1)"
+) 2>&1)"
 
 if [[ "${triangle_out}" == *"HAZ"* ]] && \
     [[ "${triangle_out}" == *"Nope"* ]]; then
@@ -92,6 +92,3 @@ if [[ "${triangle_out}" == *"HAZ"* ]] && \
     fi
 
 echo "${triangle_out}\n"
-
-echo "### Testing worksheet.py\n"
-worksheet_out=$(())
