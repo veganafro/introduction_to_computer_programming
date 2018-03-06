@@ -51,7 +51,7 @@ EOF
 ) 2>&1)
 $((python3 adventure.py <<EOF
 Derp
-Wizzard
+Wizard
 open
 EOF
 ) 2>&1)
