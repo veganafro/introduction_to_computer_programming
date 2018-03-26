@@ -81,15 +81,38 @@ fi
 echo "${flagged_out}\n### Done testing flagged.py\n"
 
 
-echo "### Testing average_word.py\n"
-
-
-
-echo "### Done testing average_word.py\n"
-
-
 echo "### Testing counting.py\n"
 
+counting_out=$(
+    (
+	python3 counting.py
+    ) 2>&1)
 
+if [[ "${counting_out}" == *"while loops
+2
+4
+6
+8
+10
+5
+4
+3
+2
+1
+for loops
+2
+4
+6
+8
+10
+5
+4
+3
+2
+1"* ]]; then
+    echo "VVV All counting.py tests pass\n"
+else
+    echo "XXX Some counting.py tests do not pass\n"
+fi
 
-echo "### Done testing counting.py\n"
+echo "${counting_out}\n### Done testing counting.py\n"
