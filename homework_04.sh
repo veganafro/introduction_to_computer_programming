@@ -50,14 +50,35 @@ else
     echo "XXX Some odds_and_evens.py tests do not pass\n"
 fi
 
-echo "${odds_and_evens_out_1}\n${odds_and_evens_out_2}\n### Done testing odd_and_evens.py"
+echo "${odds_and_evens_out_1}\n${odds_and_evens_out_2}\n### Done testing odd_and_evens.py\n"
 
 
 echo "### Testing flagged.py\n"
 
+flagged_out=$(
+    (
+	python3 flagged.py <<-EOF
+	0
+	5
+	$
+	EOF
+    ) 2>&1)
 
+if [[ "${flagged_out}" == *"$$$$$
+ $$$$
+  $$$
+   $$
+    $
+   $$
+  $$$
+ $$$$
+$$$$$"* ]]; then
+    echo "VVV All flagged.py tests pass\n"
+else
+    echo "XXX Some flagged.py tests do not pass\n"
+fi
 
-echo "### Done testing flagged.py\n"
+echo "${flagged_out}\n### Done testing flagged.py\n"
 
 
 echo "### Testing average_word.py\n"
