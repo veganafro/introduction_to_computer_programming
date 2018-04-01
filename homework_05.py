@@ -1,5 +1,6 @@
 import unittest
 import analyze_numbers
+import click_quadrant
 
 class AnalyzeNumbers(unittest.TestCase):
 
@@ -19,8 +20,21 @@ class AnalyzeNumbers(unittest.TestCase):
         self.assertTrue(analyze_numbers.is_abundant(12))
 
     def test_abundant_false(self):
-        self.assertFalse(analyze_numbers.is_abundant())
+        self.assertFalse(analyze_numbers.is_abundant(13))
 
+class ClickQuadrant(unittest.TestCase):
+
+    def test_upper_right(self):
+        self.assertEqual("red", click_quadrant.get_quadrant_color(12, 12))
+
+    def test_lower_right(self):
+        self.assertEqual("green", click_quadrant.get_quadrant_color(12, -12))
+
+    def test_upper_left(self):
+        self.assertEqual("blue", click_quadrant.get_quadrant_color(-12, 12))
+
+    def test_lower_left(self):
+        self.assertEqual("yellow", click_quadrant.get_quadrant_color(-12, -12))
         
 if __name__ == '__main__':
     unittest.main()
