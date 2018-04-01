@@ -1,6 +1,6 @@
 import unittest
 import analyze_numbers
-import click_quadrant
+import click_quad
 
 class AnalyzeNumbers(unittest.TestCase):
 
@@ -25,16 +25,16 @@ class AnalyzeNumbers(unittest.TestCase):
 class ClickQuadrant(unittest.TestCase):
 
     def test_upper_right(self):
-        self.assertEqual("red", click_quadrant.get_quadrant_color(12, 12))
+        self.assertEqual("red", click_quad.get_quadrant_color(12, 12))
 
     def test_lower_right(self):
-        self.assertEqual("green", click_quadrant.get_quadrant_color(12, -12))
+        self.assertEqual("green", click_quad.get_quadrant_color(12, -12))
 
     def test_upper_left(self):
-        self.assertEqual("blue", click_quadrant.get_quadrant_color(-12, 12))
+        self.assertEqual("blue", click_quad.get_quadrant_color(-12, 12))
 
     def test_lower_left(self):
-        self.assertEqual("yellow", click_quadrant.get_quadrant_color(-12, -12))
+        self.assertEqual("yellow", click_quad.get_quadrant_color(-12, -12))
         
 if __name__ == '__main__':
     unittest.main()
