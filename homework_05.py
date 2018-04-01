@@ -1,6 +1,6 @@
 import unittest
 import analyze_numbers
-import click_quad
+import clicky_quad as click_quad
 
 class AnalyzeNumbers(unittest.TestCase):
 
