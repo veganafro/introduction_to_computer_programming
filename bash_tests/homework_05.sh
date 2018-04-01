@@ -15,3 +15,5 @@ if [[ "${slashes_out}" == *"|/|\n|\\|\n|/|"* ]]; then
 else
     echo "XXX Some slashes.py tests do not pass\n"
 fi
+
+echo "${slashes_out}\n###Done testing slashes.py\n"
