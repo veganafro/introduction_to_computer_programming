@@ -10,7 +10,8 @@ slashes_out=$(
 	EOF
     ) 2>&1)
 
-if [[ "${slashes_out}" == *"|/|\n|\\|\n|/|"* ]]; then
+if [[ "${slashes_out}" == *"|/|
+|\\|"* ]]; then
     echo "VVV All slashes.py tests pass\n"
 else
     echo "XXX Some slashes.py tests do not pass\n"
