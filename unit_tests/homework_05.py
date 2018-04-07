@@ -55,7 +55,18 @@ class Funcynum(unittest.TestCase):
 
 
     def test_vertical_lines(self):
-        self.assertEqual(" xx\n xx", funcynum.vertical_lines("x", 2, 1, 2, 0))
+        actual_out = funcynum.vertical_lines(
+            "x", # char
+            2, # height
+            1, # left_padding
+            2, # number
+            0 # interior_offset
+        )
+        expected_out = """
+         xx
+         xx
+        """
+        self.assertEqual(expected_out, actual_out)
 
 
 if __name__ == '__main__':
