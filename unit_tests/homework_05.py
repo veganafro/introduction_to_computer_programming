@@ -68,6 +68,9 @@ class Funcynum(unittest.TestCase):
         """
         self.assertEqual(expected_out, actual_out)
 
+    def test_vertical_line(self):
+        
+
 
 if __name__ == '__main__':
     unittest.main()
