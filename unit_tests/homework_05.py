@@ -81,8 +81,6 @@ class Funcynum(unittest.TestCase):
         """
         self.assertEqual(expected_out, actual_out)
 
-    
-
 
 if __name__ == '__main__':
     unittest.main()
