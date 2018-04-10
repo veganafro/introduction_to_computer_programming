@@ -80,11 +80,7 @@ class Funcynum(unittest.TestCase):
           x
         """
         self.assertEqual(expected_out, actual_out)
-
-
-    class Quizzy(unittest.TestCase):
-
-        def
+        
 
 if __name__ == '__main__':
     unittest.main()
