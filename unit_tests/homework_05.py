@@ -75,8 +75,7 @@ class Funcynum(unittest.TestCase):
             2, # left_padding
         )
         expected_out = """  x
-          x
-        """
+          x"""
         self.assertEqual(expected_out, actual_out)
         
 
