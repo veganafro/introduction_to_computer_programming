@@ -51,7 +51,11 @@ class ClickQuadrant(unittest.TestCase):
 class Funcynum(unittest.TestCase):
 
     def test_horizontal_line(self):
-        self.assertEqual("  xx", funcynum.horizontal_line("x", 4, 2))
+        self.assertEqual("  xx", funcynum.horizontal_line(
+            "x",
+            4,
+            2
+        ))
 
 
     def test_vertical_lines(self):
