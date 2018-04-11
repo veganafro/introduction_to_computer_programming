@@ -72,7 +72,7 @@ class Funcynum(unittest.TestCase):
             2, # height
             2, # left_padding
         )
-        expected_out = """  x\nx"""
+        expected_out = """  x\n x"""
         self.assertEqual(expected_out, actual_out)
         
 
