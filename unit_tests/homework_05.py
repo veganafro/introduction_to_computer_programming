@@ -54,7 +54,7 @@ class Funcynum(unittest.TestCase):
         self.assertEqual("  xx", funcynum.horizontal_line(
             "x", # char
             4, # width
-            2
+            2 # left_padding
         ))
 
 
