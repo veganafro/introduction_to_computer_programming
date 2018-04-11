@@ -62,7 +62,7 @@ class Funcynum(unittest.TestCase):
             2, # number
             0 # interior_offset
         )
-        expected_out = """xx
+        expected_out = """ xx
          xx
         """
         self.assertEqual(expected_out, actual_out)
