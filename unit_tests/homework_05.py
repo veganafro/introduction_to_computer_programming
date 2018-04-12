@@ -85,16 +85,16 @@ class Funcynum(unittest.TestCase):
             "x", # char
             3 # width
         )
-        expected_out = "  x\n  x\n  x\n  x\n  x"
+        expected_out = "  x\n  x\n  x\n  x\n  x\n"
         self.assertEqual(expected_out, actual_out)
 
 
     def test_print_two(self):
         actual_out = funcynum.print_two(
-            "x", # char
+            "*", # char
             5 # width
         )
-        expected_out = "*****\n    *\n*****\n*\n*****"
+        expected_out = "*****\n    *\n*****\n*\n*****\n"
         self.assertEqual(expected_out, actual_out)
         
 if __name__ == '__main__':
