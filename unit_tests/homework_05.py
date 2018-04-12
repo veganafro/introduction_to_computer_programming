@@ -105,6 +105,10 @@ class Funcynum(unittest.TestCase):
         )
         expected_out = "*****\n    *\n*****\n    *\n*****"
         self.assertEqual(expected_out, actual_out)
+
+
+    def test_print_four(self):
+        
         
         
 if __name__ == '__main__':
