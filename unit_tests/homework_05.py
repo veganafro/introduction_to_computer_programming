@@ -162,7 +162,11 @@ class Funcynum(unittest.TestCase):
 
 
     def test_print_plus(self):
-        actual_out = 
+        actual_out = funcynum.print_plus(
+            "*",
+            5
+        )
+        expected_out = "  *\n  *\n*****\n  *\n  *"
         
 
         
