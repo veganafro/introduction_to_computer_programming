@@ -18,3 +18,12 @@ else
 fi
 
 echo "${slashes_out}\n###Done testing slashes.py\n"
+
+echo "### Running unit tests\n"
+
+cp ~/github/grading_tests/unit_tests/homework_05.py .
+python3 homework_05.py
+
+echo "### Done running unit tests\n"
+
+echo "### T"
