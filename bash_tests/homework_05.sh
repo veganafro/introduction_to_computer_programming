@@ -41,3 +41,5 @@ quizzy_out=$(
 		69
 		EOF
 	) 2>&1)
+
+echo "${quizzy_out}\n###Done testing feeling_quizzy.py\n"
