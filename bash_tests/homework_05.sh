@@ -4,10 +4,10 @@ echo "### Testing slashes.py\n"
 
 slashes_out=$(
     (
-	python3 slashes.py <<-EOF
-	3
-	2
-	EOF
+		python3 slashes.py <<-EOF
+		3
+		2
+		EOF
     ) 2>&1)
 
 if [[ "${slashes_out}" == *"|/|
@@ -26,4 +26,18 @@ python3 homework_05.py
 
 echo "### Done running unit tests\n"
 
-echo "### T"
+echo "### Testing feeling_quizzy.py\n"
+
+quizzy_out=$(
+	(
+		python3 feeling_quizzy.py <<-EOF
+		2
+		3
+		dddd
+		X
+		3
+		6
+		9
+		69
+		EOF
+	) 2>&1)
