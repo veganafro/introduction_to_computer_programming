@@ -133,6 +133,15 @@ class Funcynum(unittest.TestCase):
         expected_out = "*****\n*\n*****\n*   *\n*****"
         self.assertEqual(expected_out, actual_out)
 
+
+    def test_print_seven(self):
+        actual_out = funcynum.print_seven(
+            "*",
+            5
+        )
+        expected_out = "*****\n    *\n    *\n    *\n    *"
+        self.assertEqual(expected_out, actual_out)
+
         
 if __name__ == '__main__':
     unittest.main()
