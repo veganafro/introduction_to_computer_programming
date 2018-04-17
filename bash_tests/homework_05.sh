@@ -34,7 +34,7 @@ quizzy_out=$(
 		2
 		3
 		dddd
-		X
+		Z
 		3
 		6
 		9
