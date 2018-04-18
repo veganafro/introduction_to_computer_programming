@@ -86,7 +86,6 @@ class Funcynum(unittest.TestCase):
             "*",
             5
         ).strip()
-        actual_out = re.sub('[\s+]', '', actual_out)
         expected_out = "*****\n*   *\n*   *\n*   *\n*****"
         self.assertEqual(expected_out, actual_out)
 
@@ -96,7 +95,6 @@ class Funcynum(unittest.TestCase):
             "x", # char
             3 # width
         ).strip()
-        actual_out = re.sub('[\s+]', '', actual_out)
         expected_out = "  x\n  x\n  x\n  x\n  x"
         self.assertEqual(expected_out, actual_out)
 
@@ -106,7 +104,6 @@ class Funcynum(unittest.TestCase):
             "*", # char
             5 # width
         ).strip()
-        actual_out = re.sub('[\s+]', '', actual_out)
         expected_out = "*****\n    *\n*****\n*\n*****"
         self.assertEqual(expected_out, actual_out)
 
@@ -116,7 +113,6 @@ class Funcynum(unittest.TestCase):
             "*", # char
             5 # width
         ).strip()
-        actual_out = re.sub('[\s+]', '', actual_out)
         expected_out = "*****\n    *\n*****\n    *\n*****"
         self.assertEqual(expected_out, actual_out)
 
@@ -126,7 +122,6 @@ class Funcynum(unittest.TestCase):
             "*",
             5
         ).strip()
-        actual_out = re.sub('[\s+]', '', actual_out)
         expected_out = "*   *\n*   *\n*****\n    *\n    *"
         self.assertEqual(expected_out, actual_out)
 
@@ -136,7 +131,6 @@ class Funcynum(unittest.TestCase):
             "*",
             5
         ).strip()
-        actual_out = re.sub('[\s+]', '', actual_out)
         expected_out = "*****\n*\n*****\n    *\n*****"
         self.assertEqual(expected_out, actual_out)
 
@@ -146,7 +140,6 @@ class Funcynum(unittest.TestCase):
             "*",
             5
         ).strip()
-        actual_out = re.sub('[\s+]', '', actual_out)
         expected_out = "*****\n*\n*****\n*   *\n*****"
         self.assertEqual(expected_out, actual_out)
 
@@ -156,7 +149,6 @@ class Funcynum(unittest.TestCase):
             "*",
             5
         ).strip()
-        actual_out = re.sub('[\s+]', '', actual_out)
         expected_out = "*****\n    *\n    *\n    *\n    *"
         self.assertEqual(expected_out, actual_out)
 
@@ -166,7 +158,6 @@ class Funcynum(unittest.TestCase):
             "*",
             5
         ).strip()
-        actual_out = re.sub('[\s+]', '', actual_out)
         expected_out = "*****\n*   *\n*****\n*   *\n*****"
         self.assertEqual(expected_out, actual_out)
 
@@ -176,7 +167,6 @@ class Funcynum(unittest.TestCase):
             "*",
             5
         ).strip()
-        actual_out = re.sub('[\s+]', '', actual_out)
         expected_out = "*****\n*   *\n*****\n    *\n    *"
         self.assertEqual(expected_out, actual_out)
 
