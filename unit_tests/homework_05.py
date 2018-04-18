@@ -55,7 +55,7 @@ class Funcynum(unittest.TestCase):
             "x", # char
             4, # width
             2 # left_padding
-        ).strip())
+        ))
 
 
     def test_vertical_lines(self):
@@ -65,7 +65,7 @@ class Funcynum(unittest.TestCase):
             1, # left_padding
             2, # number
             0 # interior_offset
-        ).strip()
+        )
         expected_out = """ xx\n xx"""
         self.assertEqual(expected_out, actual_out)
 
@@ -75,7 +75,7 @@ class Funcynum(unittest.TestCase):
             "x", # char
             2, # height
             2, # left_padding
-        ).strip()
+        )
         expected_out = """  x\n  x"""
         self.assertEqual(expected_out, actual_out)
 
