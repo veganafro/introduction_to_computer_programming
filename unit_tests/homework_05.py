@@ -185,7 +185,7 @@ class Funcynum(unittest.TestCase):
             "*",
             5
         ).strip()
-        expected_out = "\n\n*****"
+        expected_out = "*****"
         self.assertEqual(expected_out, actual_out)
         
 
