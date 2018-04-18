@@ -81,11 +81,11 @@ class Funcynum(unittest.TestCase):
 
         
     def test_print_zero(self):
-        expected_out = funcynum.print_zero(
+        actual_out = funcynum.print_zero(
             "*",
             5
         ).strip()
-        actual_out = "*****\n*   *\n*   *\n*   *\n*****"
+        expected_out = "*****\n*   *\n*   *\n*   *\n*****"
         self.assertEqual(expected_out, actual_out)
 
 
