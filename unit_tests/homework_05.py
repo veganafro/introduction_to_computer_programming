@@ -55,7 +55,7 @@ class Funcynum(unittest.TestCase):
             "x", # char
             4, # width
             2 # left_padding
-        ))
+        ).strip())
 
 
     def test_vertical_lines(self):
@@ -65,7 +65,7 @@ class Funcynum(unittest.TestCase):
             1, # left_padding
             2, # number
             0 # interior_offset
-        )
+        ).strip()
         expected_out = """ xx\n xx"""
         self.assertEqual(expected_out, actual_out)
 
@@ -75,7 +75,7 @@ class Funcynum(unittest.TestCase):
             "x", # char
             2, # height
             2, # left_padding
-        )
+        ).strip()
         expected_out = """  x\n  x"""
         self.assertEqual(expected_out, actual_out)
 
@@ -84,7 +84,7 @@ class Funcynum(unittest.TestCase):
         expected_out = funcynum.print_zero(
             "*",
             5
-        )
+        ).strip()
         actual_out = "*****\n*   *\n*   *\n*   *\n*****"
         self.assertEqual(expected_out, actual_out)
 
@@ -93,7 +93,7 @@ class Funcynum(unittest.TestCase):
         actual_out = funcynum.print_one(
             "x", # char
             3 # width
-        )
+        ).strip()
         expected_out = "  x\n  x\n  x\n  x\n  x"
         self.assertEqual(expected_out, actual_out)
 
@@ -102,7 +102,7 @@ class Funcynum(unittest.TestCase):
         actual_out = funcynum.print_two(
             "*", # char
             5 # width
-        )
+        ).strip()
         expected_out = "*****\n    *\n*****\n*\n*****"
         self.assertEqual(expected_out, actual_out)
 
@@ -111,7 +111,7 @@ class Funcynum(unittest.TestCase):
         actual_out = funcynum.print_three(
             "*", # char
             5 # width
-        )
+        ).strip()
         expected_out = "*****\n    *\n*****\n    *\n*****"
         self.assertEqual(expected_out, actual_out)
 
@@ -120,7 +120,7 @@ class Funcynum(unittest.TestCase):
         actual_out = funcynum.print_four(
             "*",
             5
-        )
+        ).strip()
         expected_out = "*   *\n*   *\n*****\n    *\n    *"
         self.assertEqual(expected_out, actual_out)
 
@@ -129,7 +129,7 @@ class Funcynum(unittest.TestCase):
         actual_out = funcynum.print_five(
             "*",
             5
-        )
+        ).strip()
         expected_out = "*****\n*\n*****\n    *\n*****"
         self.assertEqual(expected_out, actual_out)
 
@@ -138,7 +138,7 @@ class Funcynum(unittest.TestCase):
         actual_out = funcynum.print_six(
             "*",
             5
-        )
+        ).strip()
         expected_out = "*****\n*\n*****\n*   *\n*****"
         self.assertEqual(expected_out, actual_out)
 
@@ -147,7 +147,7 @@ class Funcynum(unittest.TestCase):
         actual_out = funcynum.print_seven(
             "*",
             5
-        )
+        ).strip()
         expected_out = "*****\n    *\n    *\n    *\n    *"
         self.assertEqual(expected_out, actual_out)
 
@@ -156,7 +156,7 @@ class Funcynum(unittest.TestCase):
         actual_out = funcynum.print_eight(
             "*",
             5
-        )
+        ).strip()
         expected_out = "*****\n*   *\n*****\n*   *\n*****"
         self.assertEqual(expected_out, actual_out)
 
@@ -165,7 +165,7 @@ class Funcynum(unittest.TestCase):
         actual_out = funcynum.print_nine(
             "*",
             5
-        )
+        ).strip()
         expected_out = "*****\n*   *\n*****\n    *\n    *"
         self.assertEqual(expected_out, actual_out)
 
@@ -174,7 +174,7 @@ class Funcynum(unittest.TestCase):
         actual_out = funcynum.print_plus(
             "*",
             5
-        )
+        ).strip()
         expected_out = "  *\n  *\n*****\n  *\n  *"
         self.assertEqual(expected_out, actual_out)
 
@@ -183,7 +183,7 @@ class Funcynum(unittest.TestCase):
         actual_out = funcynum.print_minus(
             "*",
             5
-        )
+        ).strip()
         expected_out = "\n\n*****"
         self.assertEqual(expected_out, actual_out)
         
