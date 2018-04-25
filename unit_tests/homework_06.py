@@ -46,3 +46,6 @@ class Homework06(unittest.TestCase):
             args = "AZ"
     
 """
+
+if __name__ == "__main__":
+    unittest.main()
