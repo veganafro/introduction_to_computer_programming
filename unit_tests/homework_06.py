@@ -25,7 +25,7 @@ class Homework06(unittest.TestCase):
         try:
             args = "1-3-3-26-1-25"
             expected_out = "ACCZAY"
-            actual_out = encode_decode(args)
+            actual_out = encode_decode.num_to_let(args)
             self.assertEqual(expected_out, actual_out)
         except:
             self.fail("Failure: num_to_let")
@@ -33,9 +33,16 @@ class Homework06(unittest.TestCase):
 
     def test_num_to_let_2(self):
         try:
-            args = "1-??-3"
+            args = "-1-??-3-"
             expected_out = "AC"
-            actual_out = encoded_decode(args)
+            actual_out = encoded_decode.num_to_let(args)
             self.assertEqual(expected_out, actual_out)
         except:
             self.fail("Failure: num_to_let")
+
+"""
+    def test_num_to_let_1(self):
+        try:
+            args = "AZ"
+    
+"""
