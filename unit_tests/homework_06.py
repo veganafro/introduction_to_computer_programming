@@ -21,7 +21,7 @@ class Homework06(unittest.TestCase):
             return "".join(self.data)
 
 
-    def test_num_to_let(self):
+    def test_num_to_let_1(self):
         try:
             args = "1-3-3-26-1-25"
             actual_out = encode_decode(args)
@@ -29,3 +29,11 @@ class Homework06(unittest.TestCase):
             self.assertEqual(expected_out, actual_out)
         except:
             self.fail("Failure: num_to_let")
+
+
+    def test_num_to_let_2(self):
+        try:
+            args = "1-??-3"
+            expected_out = "AC"
+            actual_out = encoded_decode(args)
+            self.assertEqual(expected_out, actual_out)
