@@ -3,6 +3,7 @@ import unittest
 import sys
 
 import encode_decode
+import barcode_utilities
 
 class Homework06(unittest.TestCase):
 
@@ -62,7 +63,11 @@ class Homework06(unittest.TestCase):
 
 
     def test_generate_bar_widths(self):
-        
+        try:
+            args = "043000181706"
+            expected_out = "11132111132141132113211321111111222112132221131232111114111"
+            actual_out = barcode_utilities.generage_bar_widths(args)
+            self.assertEqual(expected_out, actual_out)
             
 if __name__ == "__main__":
     unittest.main()
