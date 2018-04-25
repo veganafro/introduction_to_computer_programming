@@ -33,19 +33,36 @@ class Homework06(unittest.TestCase):
 
     def test_num_to_let_2(self):
         try:
-            args = "-1-??-3-"
+            args = "-1-a-??-3-69-"
             expected_out = "AC"
             actual_out = encode_decode.num_to_let(args)
             self.assertEqual(expected_out, actual_out)
         except:
             self.fail("Failure: num_to_let")
 
-"""
+
     def test_num_to_let_1(self):
         try:
             args = "AZ"
-    
-"""
+            expected_out = "1-26"
+            actual_out = encode_decode.let_to_num(args)
+            self.assertEqual(expected_out, actual_out)
+        except:
+            self.fail("Failure: let_to_num")
 
+
+    def test_num_to_let_2(self):
+        try:
+            args = "!A69Z$"
+            expected_out = "1-26"
+            actual_out = encode_decode.let_to_num(args)
+            self.assertEqual(expected_out, actual_out)
+        except:
+            self.fail("Failure: let_to_num")
+
+
+    def test_generate_bar_widths(self):
+        
+            
 if __name__ == "__main__":
     unittest.main()
