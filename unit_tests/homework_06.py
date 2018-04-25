@@ -22,4 +22,10 @@ class Homework06(unittest.TestCase):
 
 
     def test_num_to_let(self):
-        
+        try:
+            args = "1-3-3-26-1-25"
+            actual_out = encode_decode(args)
+            expected_out = "ACCZAY"
+            self.assertEqual(expected_out, actual_out)
+        except:
+            self.fail("Failure: num_to_let")
