@@ -35,7 +35,7 @@ class Homework06(unittest.TestCase):
         try:
             args = "-1-??-3-"
             expected_out = "AC"
-            actual_out = encoded_decode.num_to_let(args)
+            actual_out = encode_decode.num_to_let(args)
             self.assertEqual(expected_out, actual_out)
         except:
             self.fail("Failure: num_to_let")
