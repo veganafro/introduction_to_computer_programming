@@ -147,7 +147,26 @@ class Homework06(unittest.TestCase):
             self.fail("Failure: is_palindrome")
 
 
-    
+    def test_pig_latin_1(self):
+        try:
+            args = "cannot convert"
+            self.assertEqual(
+                args,
+                pig_latin.to_pig_latin(args)
+            )
+        except:
+            self.fail("Failure: to_pig_latin")
+
+
+    def test_pig_latin_2(self):
+        try:
+            args = "aye"
+            self.assertEqual(
+                "ayeway",
+                pig_latin.to_pig_latin(args)
+            )
+        except:
+            self.fail("Failure: to_pig_latin")
             
 
 
