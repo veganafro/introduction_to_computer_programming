@@ -234,6 +234,6 @@ class Homework06(unittest.TestCase):
         except:
             self.fail("Faiulre: to_pig_latin")
             
-    
+
 if __name__ == "__main__":
     unittest.main()
