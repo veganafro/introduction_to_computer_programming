@@ -4,6 +4,7 @@ import sys
 
 import encode_decode
 import barcode_utilities
+import is_palindrome
 
 class Homework06(unittest.TestCase):
 
@@ -99,9 +100,22 @@ class Homework06(unittest.TestCase):
             self.fail("Failure: valid_barcode")
 
 
-    def test_reverse(self):
+    def test_reverse_1(self):
         try:
             args = ""
+            actual_out = is_palindrome.reverse(args)
+            self.assertEqual("", actual_out)
+        except:
+            self.fail("Failure: reverse")
+
+
+    def test_reverse_2(self):
+        try:
+            args = "derp"
+            actual_out = is_palindrome.reverse(args)
+            self.assertEqual("pred", actual_out)
+        except:
+            self.fail("Failure: reverse")
             
 if __name__ == "__main__":
     unittest.main()
