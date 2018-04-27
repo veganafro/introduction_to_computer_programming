@@ -88,7 +88,15 @@ class Homework06(unittest.TestCase):
             self.assertTrue(actual_out)
         except:
             self.fail("Failure: valid_barcode")
-            
+
+
+    def test_valid_barcode_3(self):
+        try:
+            args = ""
+            actual_out = barcode_utilities.valid_barcode(args)
+            self.assertFalse(actual_out)
+        except:
+            self.fail("Failure: valid_barcode")
             
 if __name__ == "__main__":
     unittest.main()
