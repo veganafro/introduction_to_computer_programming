@@ -223,6 +223,17 @@ class Homework06(unittest.TestCase):
         except:
             self.fail("Faiulre: to_pig_latin")
 
+
+    def test_pig_latin_8(self):
+        try:
+            args = "s23"
+            self.assertEqual(
+                "s23",
+                pig_latin.to_pig_latin(args)
+            )
+        except:
+            self.fail("Faiulre: to_pig_latin")
+            
     
 if __name__ == "__main__":
     unittest.main()
