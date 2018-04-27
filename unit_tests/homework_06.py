@@ -167,6 +167,17 @@ class Homework06(unittest.TestCase):
             )
         except:
             self.fail("Failure: to_pig_latin")
+
+
+    def test_pig_latin_3(self):
+        try:
+            args = "shut"
+            self.assertEqual(
+                "utchay",
+                pig_latin.to_pig_latin(args)
+            )
+        except:
+            self.fail("Faiulre: to_pig_latin")
             
 
 
