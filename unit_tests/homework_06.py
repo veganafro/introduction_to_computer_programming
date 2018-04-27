@@ -21,7 +21,7 @@ class Homework06(unittest.TestCase):
         def __str__(self):
             return "".join(self.data)
 
-
+        
     def test_num_to_let_1(self):
         try:
             args = "1-3-3-26-1-25"
@@ -97,6 +97,11 @@ class Homework06(unittest.TestCase):
             self.assertFalse(actual_out)
         except:
             self.fail("Failure: valid_barcode")
+
+
+    def test_reverse(self):
+        try:
+            args = ""
             
 if __name__ == "__main__":
     unittest.main()
