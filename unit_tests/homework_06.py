@@ -36,7 +36,7 @@ class Homework06(unittest.TestCase):
 
     def test_num_to_let_2(self):
         try:
-            args = "-1-a-??-3-69-"
+            args = "-1-a--??-3-69-"
             expected_out = "AC"
             actual_out = encode_decode.num_to_let(args)
             self.assertEqual(expected_out, actual_out)
