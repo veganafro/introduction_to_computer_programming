@@ -68,6 +68,8 @@ class Homework06(unittest.TestCase):
             expected_out = "11132111132141132113211321111111222112132221131232111114111"
             actual_out = barcode_utilities.generage_bar_widths(args)
             self.assertEqual(expected_out, actual_out)
+        except:
+            self.fail("Failure: generate_bar_widths")
             
 if __name__ == "__main__":
     unittest.main()
