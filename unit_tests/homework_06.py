@@ -116,6 +116,41 @@ class Homework06(unittest.TestCase):
             self.assertEqual("pred", actual_out)
         except:
             self.fail("Failure: reverse")
+
+
+    def test_is_palindrome_1(self):
+        try:
+            args = ""
+            self.assertTrue(
+                is_palindrome.is_palindrome(args)
+            )
+        except:
+            self.fail("Failure: is_palindrome")
+
+    def test_is_palindrome_2(self):
+        try:
+            args = "derp"
+            self.assertFalse(
+                is_palindrome.is_palindrome(args)
+            )
+        except:
+            self.fail("Failure: is_palindrome")
+
+
+    def test_is_palindrome_3(self):
+        try:
+            args = "gll a llg"
+            self.assertTrue(
+                is_palindrome.is_palindrome(args)
+            )
+        except:
+            self.fail("Failure: is_palindrome")
+
+
+    
             
+
+
+    
 if __name__ == "__main__":
     unittest.main()
