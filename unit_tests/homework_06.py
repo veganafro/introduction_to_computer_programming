@@ -173,13 +173,33 @@ class Homework06(unittest.TestCase):
         try:
             args = "shut"
             self.assertEqual(
+                "utshay",
+                pig_latin.to_pig_latin(args)
+            )
+        except:
+            self.fail("Faiulre: to_pig_latin")
+
+
+    def test_pig_latin_4(self):
+        try:
+            args = "chut"
+            self.assertEqual(
                 "utchay",
                 pig_latin.to_pig_latin(args)
             )
         except:
             self.fail("Faiulre: to_pig_latin")
-            
 
+
+    def test_pig_latin_5(self):
+        try:
+            args = "thut"
+            self.assertEqual(
+                "utthay",
+                pig_latin.to_pig_latin(args)
+            )
+        except:
+            self.fail("Faiulre: to_pig_latin")
 
     
 if __name__ == "__main__":
