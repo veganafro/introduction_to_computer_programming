@@ -72,9 +72,13 @@ class Homework06(unittest.TestCase):
             self.fail("Failure: generate_bar_widths")
 
 
-    def test_valid_barcode(self):
+    def test_valid_barcode_1(self):
         try:
-            
+            args = "036000291450"
+            actual_out = barcode_utilities.valid_barcode(args)
+            self.assertFalse(actual_out)
+        except:
+            self.fail("Failure: valid_barcode")
             
 if __name__ == "__main__":
     unittest.main()
