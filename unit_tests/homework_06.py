@@ -70,6 +70,11 @@ class Homework06(unittest.TestCase):
             self.assertEqual(expected_out, actual_out)
         except:
             self.fail("Failure: generate_bar_widths")
+
+
+    def test_valid_barcode(self):
+        try:
+            
             
 if __name__ == "__main__":
     unittest.main()
