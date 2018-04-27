@@ -5,6 +5,7 @@ import sys
 import encode_decode
 import barcode_utilities
 import is_palindrome
+import pig_latin
 
 class Homework06(unittest.TestCase):
 
