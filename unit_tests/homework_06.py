@@ -46,7 +46,7 @@ class Homework06(unittest.TestCase):
             )
 
 
-    def test_num_to_let_1(self):
+    def test_let_to_num_1(self):
         try:
             args = "AZ"
             expected_out = "1-26"
@@ -56,7 +56,7 @@ class Homework06(unittest.TestCase):
             self.fail("Failure: let_to_num")
 
 
-    def test_num_to_let_2(self):
+    def test_let_to_num_2(self):
         try:
             args = "!A69Z$"
             expected_out = "1-26"
