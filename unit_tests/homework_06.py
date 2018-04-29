@@ -98,7 +98,7 @@ class Homework06(unittest.TestCase):
             actual_out = barcode_utilities.valid_barcode(args)
             self.assertFalse(actual_out)
         except:
-            self.fail("Failure: valid_barcode")
+            self.fail("Failure: valid_barcode does not properly handle empty string case.")
 
 
     def test_reverse_1(self):
