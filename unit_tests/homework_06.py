@@ -53,7 +53,7 @@ class Homework06(unittest.TestCase):
             actual_out = encode_decode.let_to_num(args)
             self.assertEqual(expected_out, actual_out)
         except:
-            self.fail("Failure: let_to_num")
+            self.fail("Failure: let_to_num does not properly handle standard case.")
 
 
     def test_let_to_num_2(self):
@@ -63,7 +63,7 @@ class Homework06(unittest.TestCase):
             actual_out = encode_decode.let_to_num(args)
             self.assertEqual(expected_out, actual_out)
         except:
-            self.fail("Failure: let_to_num")
+            self.fail("Failure: let_to_num does not properly handle non alphabetic case.")
 
 
     def test_generate_bar_widths(self):
@@ -73,7 +73,7 @@ class Homework06(unittest.TestCase):
             actual_out = barcode_utilities.generate_bar_widths(args)
             self.assertEqual(expected_out, actual_out)
         except:
-            self.fail("Failure: generate_bar_widths")
+            self.fail("Failure: generate_bar_widths does not generate correct bar widths.")
 
 
     def test_valid_barcode_1(self):
@@ -82,7 +82,7 @@ class Homework06(unittest.TestCase):
             actual_out = barcode_utilities.valid_barcode(args)
             self.assertFalse(actual_out)
         except:
-            self.fail("Failure: valid_barcode")
+            self.fail("Failure: valid_barcode does not properly invalidate incorrect barcode.")
 
 
     def test_valid_barcode_2(self):
@@ -91,7 +91,7 @@ class Homework06(unittest.TestCase):
             actual_out = barcode_utilities.valid_barcode(args)
             self.assertTrue(actual_out)
         except:
-            self.fail("Failure: valid_barcode")
+            self.fail("Failure: valid_barcode does not properly validate correct barcode.")
 
 
     def test_valid_barcode_3(self):
