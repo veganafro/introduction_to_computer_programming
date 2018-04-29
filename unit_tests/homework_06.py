@@ -158,7 +158,7 @@ class Homework06(unittest.TestCase):
                 pig_latin.to_pig_latin(args)
             )
         except:
-            self.fail("Failure: to_pig_latin")
+            self.fail("Failure: to_pig_latin does not properly handle non alphabetic characters.")
 
 
     def test_pig_latin_2(self):
@@ -169,7 +169,7 @@ class Homework06(unittest.TestCase):
                 pig_latin.to_pig_latin(args)
             )
         except:
-            self.fail("Failure: to_pig_latin")
+            self.fail("Failure: to_pig_latin does not properly handle vowel case.")
 
 
     def test_pig_latin_3(self):
@@ -180,7 +180,7 @@ class Homework06(unittest.TestCase):
                 pig_latin.to_pig_latin(args)
             )
         except:
-            self.fail("Faiulre: to_pig_latin")
+            self.fail("Faiulre: to_pig_latin does not properly handle sh case.")
 
 
     def test_pig_latin_4(self):
@@ -191,7 +191,7 @@ class Homework06(unittest.TestCase):
                 pig_latin.to_pig_latin(args)
             )
         except:
-            self.fail("Faiulre: to_pig_latin")
+            self.fail("Faiulre: to_pig_latin does not properly handle ch case.")
 
 
     def test_pig_latin_5(self):
@@ -202,7 +202,7 @@ class Homework06(unittest.TestCase):
                 pig_latin.to_pig_latin(args)
             )
         except:
-            self.fail("Faiulre: to_pig_latin")
+            self.fail("Faiulre: to_pig_latin does not properly handle th case.")
 
 
     def test_pig_latin_6(self):
@@ -213,7 +213,7 @@ class Homework06(unittest.TestCase):
                 pig_latin.to_pig_latin(args)
             )
         except:
-            self.fail("Faiulre: to_pig_latin")
+            self.fail("Faiulre: to_pig_latin does not properly handle qa case.")
 
 
     def test_pig_latin_7(self):
@@ -224,18 +224,18 @@ class Homework06(unittest.TestCase):
                 pig_latin.to_pig_latin(args)
             )
         except:
-            self.fail("Faiulre: to_pig_latin")
+            self.fail("Faiulre: to_pig_latin does not properly handle consonant case.")
 
 
     def test_pig_latin_8(self):
         try:
-            args = "s23"
+            args = "s"
             self.assertEqual(
-                "s23",
+                args,
                 pig_latin.to_pig_latin(args)
             )
         except:
-            self.fail("Faiulre: to_pig_latin")
+            self.fail("Faiulre: to_pig_latin does not properly test length requirement.")
             
 
 if __name__ == "__main__":
