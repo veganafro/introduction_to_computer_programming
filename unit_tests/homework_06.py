@@ -31,7 +31,7 @@ class Homework06(unittest.TestCase):
             actual_out = encode_decode.num_to_let(args)
             self.assertEqual(expected_out, actual_out)
         except:
-            self.fail("Failure: num_to_let")
+            self.fail("Failure: num_to_let does not properly handle standard case.")
 
 
     def test_num_to_let_2(self):
@@ -41,7 +41,9 @@ class Homework06(unittest.TestCase):
             actual_out = encode_decode.num_to_let(args)
             self.assertEqual(expected_out, actual_out)
         except:
-            self.fail("Failure: num_to_let")
+            self.fail(
+                "Failure: num_to_let does not properly handle consecutive dashes or non numerics."
+            )
 
 
     def test_num_to_let_1(self):
