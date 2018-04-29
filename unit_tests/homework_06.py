@@ -128,7 +128,7 @@ class Homework06(unittest.TestCase):
                 is_palindrome.is_palindrome(args)
             )
         except:
-            self.fail("Failure: is_palindrome")
+            self.fail("Failure: is_palindrome does not properly handle empty string case.")
 
     def test_is_palindrome_2(self):
         try:
@@ -137,7 +137,7 @@ class Homework06(unittest.TestCase):
                 is_palindrome.is_palindrome(args)
             )
         except:
-            self.fail("Failure: is_palindrome")
+            self.fail("Failure: is_palindrome does not properly handle non-palindrome.")
 
 
     def test_is_palindrome_3(self):
@@ -147,7 +147,7 @@ class Homework06(unittest.TestCase):
                 is_palindrome.is_palindrome(args)
             )
         except:
-            self.fail("Failure: is_palindrome")
+            self.fail("Failure: is_palindrome does not properly handle valid palindrome.")
 
 
     def test_pig_latin_1(self):
