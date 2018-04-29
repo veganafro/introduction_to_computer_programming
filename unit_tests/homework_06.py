@@ -107,7 +107,7 @@ class Homework06(unittest.TestCase):
             actual_out = is_palindrome.reverse(args)
             self.assertEqual("", actual_out)
         except:
-            self.fail("Failure: reverse")
+            self.fail("Failure: reverse does not properly handle empty string case.")
 
 
     def test_reverse_2(self):
@@ -116,7 +116,7 @@ class Homework06(unittest.TestCase):
             actual_out = is_palindrome.reverse(args)
             self.assertEqual("pred", actual_out)
         except:
-            self.fail("Failure: reverse")
+            self.fail("Failure: reverse does not properly handle standard case.")
 
 
     def test_is_palindrome_1(self):
