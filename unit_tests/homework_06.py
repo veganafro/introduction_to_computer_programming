@@ -36,14 +36,38 @@ class Homework06(unittest.TestCase):
 
     def test_num_to_let_2(self):
         try:
-            args = "-1-a--??-3-69-"
+            args = "-1-3-69-"
             expected_out = "AC"
             actual_out = encode_decode.num_to_let(args)
             self.assertEqual(expected_out, actual_out)
         except:
             self.fail(
-                "Failure: num_to_let does not properly handle consecutive dashes or non numerics."
+                "Failure: num_to_let does not properly handle leading or trailing dashes."
             )
+
+
+    def test_num_to_to_let_3(self):
+        try:
+            args = "---1--26"
+            actual_out = encode_decode.num_to_let(args)
+            self.assertEqual(
+                "AZ",
+                actual_out
+            )
+        except:
+            self.fail("Failure: num_to_let does not properly handle consecutive dashes")
+
+
+    def test_num_to_let_4(self):
+        try:
+            args = "1-??-3"
+            actual_out = encode_decode.num_to_let(args)
+            self.assertEqual(
+                "AC",
+                actual_out
+            )
+        except:
+            self.fail("Failure: num_to_let does not properly handle non numerics")
 
 
     def test_let_to_num_1(self):
