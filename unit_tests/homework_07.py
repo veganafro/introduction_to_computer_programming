@@ -176,7 +176,7 @@ class Homework07(unittest.TestCase):
                 import fortune_improved
             self.assertIsNotNone(str(sys.stdout))
         except:
-            self.fail("Failure: fortune_improved does not get fortunes correctly")
+            self.fail("Failure: fortune_improved does not remove fortunes correctly")
         finally:
             print("Success:", str(sys.stdout))
             sys.stdout = stdout_org
