@@ -178,9 +178,8 @@ class Homework07(unittest.TestCase):
         except:
             self.fail("Failure: fortune_improved does not remove fortunes correctly")
         finally:
-            print("Success:", str(sys.stdout))
+            print("Output after testing:", str(sys.stdout))
             sys.stdout = stdout_org
-            
 
 if __name__ == "__main__":
     unittest.main()
