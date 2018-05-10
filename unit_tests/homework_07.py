@@ -12,7 +12,7 @@ class Homework07(unittest.TestCase):
         self.animals = [
             ['jane clawston', 'cat', 10],
             ['franz catka', 'cat', 2],
-            ['sam', 'snake', 4],
+            ['sam', 'snake', 99],
             ['gertrude', 'goat', 99]
         ]
 
@@ -141,4 +141,11 @@ class Homework07(unittest.TestCase):
 
     def test_get_most_urgent_01(self):
         try:
+            actual_out = animal_functions.get_most_urgent(self.animals)
+            self.assertEqual(
+                ["gertrude", "goat", 99]
+                actual_out
+            )
+        except:
+            self.fail("Failure: get_most_urgent does not find the most urgent animal")
             
