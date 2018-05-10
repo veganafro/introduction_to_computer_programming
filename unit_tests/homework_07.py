@@ -4,7 +4,7 @@ import sys
 
 import warm_up
 import animal_functions
-import fortune_improved
+# import fortune_improved
 
 class Homework07(unittest.TestCase):
 
@@ -161,8 +161,16 @@ class Homework07(unittest.TestCase):
 
             def __str__(self):
                 return "".join(self.data)
-            
+
+        stdout_org = sys.stdout
+        custom_stdout = Console()
+
         try:
             user_input = [
-                'g',
+                'r'
+                'q'
             ]
+            with patch("builtins.input", side_effect=user_input):
+                import fortune_improved
+        except:
+            self.fail("Failure: fortune_improved does not get fortunes correctly")
