@@ -180,3 +180,6 @@ class Homework07(unittest.TestCase):
             print("Success:", str(sys.stdout))
             sys.stdout = stdout_org
             
+
+if __name__ == "__main__":
+    unittest.main()
