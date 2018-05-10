@@ -149,3 +149,20 @@ class Homework07(unittest.TestCase):
         except:
             self.fail("Failure: get_most_urgent does not find the most urgent animal")
             
+
+    def test_fortune_improved_01(self):
+        class Console(object):
+
+            def __init__(self):
+                self.data = []
+
+            def write(self, s):
+                self.data.append(s)
+
+            def __str__(self):
+                return "".join(self.data)
+            
+        try:
+            user_input = [
+                'g',
+            ]
