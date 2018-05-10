@@ -16,6 +16,10 @@ class Homework07(unittest.TestCase):
             ['gertrude', 'goat', 99]
         ]
 
+
+    def tearDown(self):
+        del self.animals
+
     def test_get_unique_values_01(self):
         try:
             args = []
@@ -122,3 +126,19 @@ class Homework07(unittest.TestCase):
             self.assertIsNone(actual_out)
         except:
             self.fail("Failure: find_by_name does not return None when an animal is not found")
+
+
+    def test_stringify_animals_01(self):
+        try:
+            actual_out = animal_functions.stringify_animals(self.animals)
+            self.assertEqual(
+                "1 - jane clawston, cat\n2 - franz catka, cat\n3 - sam, snake\n4 - gertrude, goat",
+                actual_out
+            )
+        except:
+            self.fail("Failure: stringify_animals does not correctly arrange the animals")
+
+
+    def test_get_most_urgent_01(self):
+        try:
+            
