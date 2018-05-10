@@ -143,7 +143,7 @@ class Homework07(unittest.TestCase):
         try:
             actual_out = animal_functions.get_most_urgent(self.animals)
             self.assertEqual(
-                ["gertrude", "goat", 99]
+                ["gertrude", "goat", 99],
                 actual_out
             )
         except:
