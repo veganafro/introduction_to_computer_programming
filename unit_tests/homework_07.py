@@ -179,8 +179,10 @@ class Homework07(unittest.TestCase):
                 import fortune_improved
             self.assertIsNotNone(str(sys.stdout))
         except:
+            sys.stdout = stdout_org
             self.fail("Failure: fortune_improved does not remove fortunes correctly")
-
+        sys.stdout = stdout_org
+        
         
     def test_fortune_improved_02(self):
         class Console(object):
@@ -207,7 +209,9 @@ class Homework07(unittest.TestCase):
                 import fortune_improved
             self.assertIsNotNone(str(sys.stdout))
         except:
+            sys.stdout = stdout_org
             self.fail("Failure: fortune_improved does not get fortunes correctly")
+        sys.stdout = stdout_org
 
     
     def test_fortune_improved_03(self):
@@ -236,7 +240,9 @@ class Homework07(unittest.TestCase):
                 import fortune_improved
             self.assertIsNotNone(str(sys.stdout))
         except:
+            sys.stdout = stdout_org
             self.fail("Failure: fortune_improved does not add fortunes correctly")
+        sys.stdout = stdout_org
 
             
 if __name__ == "__main__":
