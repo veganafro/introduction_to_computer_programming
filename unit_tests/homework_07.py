@@ -12,7 +12,7 @@ class Homework07(unittest.TestCase):
         self.animals = [
             ['jane clawston', 'cat', 10],
             ['franz catka', 'cat', 2],
-            ['sam', 'snake', 99],
+            ['sam', 'snake', 4],
             ['gertrude', 'goat', 99]
         ]
 
