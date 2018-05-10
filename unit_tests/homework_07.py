@@ -166,11 +166,17 @@ class Homework07(unittest.TestCase):
         custom_stdout = Console()
 
         try:
+            sys.stdout = custom_stdout
             user_input = [
                 'r'
                 'q'
             ]
             with patch("builtins.input", side_effect=user_input):
                 import fortune_improved
+            self.assertIsNotNone(str(sys.stdout))
         except:
             self.fail("Failure: fortune_improved does not get fortunes correctly")
+        finally:
+            print("Success:", str(sys.stdout))
+            sys.stdout = stdout_org
+            
