@@ -8,6 +8,14 @@ import fortune_improved
 
 class Homework07(unittest.TestCase):
 
+    def setUp(self):
+        self.animals = [
+            ['jane clawston', 'cat', 10],
+            ['franz catka', 'cat', 2],
+            ['sam', 'snake', 4],
+            ['gertrude', 'goat', 99]
+        ]
+
     def test_get_unique_values_01(self):
         try:
             args = []
@@ -98,3 +106,19 @@ class Homework07(unittest.TestCase):
             self.assertEqual("", actual_out)
         except:
             self.fail("Failure: create_sentence does not return an empty string")
+
+
+    def test_find_by_name_01(self):
+        try:
+            actual_out = animal_functions.find_by_name("sam", self.animals)
+            self.assertEqual(["sam", "snake", 4], actual_out)
+        except:
+            self.fail("Failure: find_by_name does not find an existing animal")
+
+
+    def test_find_by_name_02(self):
+        try:
+            actual_out = animal_functions.find_by_name("derp", self.animals)
+            self.assertIsNone(actual_out)
+        except:
+            self.fail("Failure: find_by_name does not return None when an animal is not found")
