@@ -168,7 +168,8 @@ class Homework07(unittest.TestCase):
         try:
             sys.stdout = custom_stdout
             user_input = [
-                'r'
+                'r',
+                '0',
                 'q'
             ]
             with patch("builtins.input", side_effect=user_input):
