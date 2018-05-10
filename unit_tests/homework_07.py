@@ -168,7 +168,10 @@ class Homework07(unittest.TestCase):
         try:
             sys.stdout = custom_stdout
             user_input = [
+                'a',
+                'this is a test fortune',
                 'r',
+                '666',
                 '0',
                 'q'
             ]
@@ -177,9 +180,64 @@ class Homework07(unittest.TestCase):
             self.assertIsNotNone(str(sys.stdout))
         except:
             self.fail("Failure: fortune_improved does not remove fortunes correctly")
-        else:
-            print("Output after testing:", str(sys.stdout))
-            sys.stdout = stdout_org
 
+        
+    def test_fortune_improved_02(self):
+        class Console(object):
+
+            def __init__(self):
+                self.data = []
+
+            def write(self, s):
+                self.data.append(s)
+
+            def __str__(self):
+                return "".join(self.data)
+
+        stdout_org = sys.stdout
+        custom_stdout = Console()
+
+        try:
+            sys.stdout = custom_stdout
+            user_input = [
+                'g',
+                'q'
+            ]
+            with patch("builtins.input", side_effect=user_input):
+                import fortune_improved
+            self.assertIsNotNone(str(sys.stdout))
+        except:
+            self.fail("Failure: fortune_improved does not get fortunes correctly")
+
+    
+    def test_fortune_improved_03(self):
+        class Console(object):
+
+            def __init__(self):
+                self.data = []
+
+            def write(self, s):
+                self.data.append(s)
+
+            def __str__(self):
+                return "".join(self.data)
+
+        stdout_org = sys.stdout
+        custom_stdout = Console()
+
+        try:
+            sys.stdout = custom_stdout
+            user_input = [
+                'a',
+                'this is a test fortune',
+                'q'
+            ]
+            with patch("builtins.input", side_effect=user_input):
+                import fortune_improved
+            self.assertIsNotNone(str(sys.stdout))
+        except:
+            self.fail("Failure: fortune_improved does not add fortunes correctly")
+
+            
 if __name__ == "__main__":
     unittest.main()
